@@ -73,9 +73,9 @@ class Fraccion():
                             self.__numerador = self.__numerador / i
                             self.__denominador = self.__denominador / i 
                         i -= 1
-        else:
-            self.__numerador = self.__numerador / self.__denominador
-            self.__denominador = 1
+            else:
+                self.__numerador = self.__numerador / self.__denominador
+                self.__denominador = 1
             
         
 

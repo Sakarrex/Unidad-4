@@ -4,7 +4,7 @@ from claseControladorContactos import ControladorContactos
 from claseObjectEncoder import ObjectEncoder
 
 def main():
-    conn = ObjectEncoder("contactos.json")
+    conn = ObjectEncoder("pacientes.json")
     repo = RespositorioContactos(conn)
     vista = ContactsView()
     ctrl = ControladorContactos(repo,vista)

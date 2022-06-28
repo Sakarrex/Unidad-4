@@ -1,0 +1,25 @@
+{
+    "__class__": "ManejadorContactos",
+    "contactos": [
+        {
+            "__class__": "Contacto",
+            "__atributos__": {
+                "apellido": "Lopez",
+                "nombre": "Maria",
+                "telefono": "(264)5637128",
+                "peso": 80.0,
+                "altura": 180
+            }
+        },
+        {
+            "__class__": "Contacto",
+            "__atributos__": {
+                "apellido": "Perez",
+                "nombre": "Marcos",
+                "telefono": "(264)7283405",
+                "peso": 120.0,
+                "altura": 200
+            }
+        }
+    ]
+}

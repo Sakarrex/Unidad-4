@@ -9,7 +9,8 @@ class Aplicacion(tk.Tk):
     __cotizador = None
 
     def __init__(self):
-        self.__cotizador = Cotizador("https://www.dolarsi.com/api/api.php?type=dolar")
+        self.__cotizador = Cotizador()
+        self.__cotizador.run()
         super().__init__()
         opts = {'ipadx': 3, 'ipady': 3, 'sticky': 'nswe'}
         self.title = "Conversor de dolares"
@@ -17,7 +18,7 @@ class Aplicacion(tk.Tk):
 
         self.__dolar = StringVar()
         self.__pesos = StringVar()
-        self.__pesos.trace('w',self.calcular)
+        self.__dolar.trace('w',self.calcular)
 
         self.entryDolares = tk.Entry(self,width=7,textvariable=self.__dolar)
         self.entryDolares.grid(row=0,column=1,**opts)

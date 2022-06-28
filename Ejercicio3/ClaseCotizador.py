@@ -1,19 +1,22 @@
-from urllib import response
-import requests
+from dataclasses import replace
+import json
+
+from urllib.request import urlopen
 
 class Cotizador:
-    __url = None
-    __solicitud = None
-    __cotizaciones = None
+    __resultado = None
 
-    def __init__(self,url) -> None:
-        self.__url = url
-        self.__solicitud = requests.get(self.__url)
-        self.__cotizaciones = self.__solicitud.json()
+    def __init__(self) -> None:
+        self.__resultado = None
+    
+    def run(self):
+        url_template = 'https://www.dolarsi.com/api/api.php?type=dolar'
+        response = urlopen(url_template)
+        self.__resultado = json.loads(response.read().decode())
+    
+    def getResultado(self):
+        return self.__resultado
     
     def getPrecio(self):
-        precio = 0
-        for dolar in self.__cotizaciones:
-            if dolar['casa']['nombre'].lower() == "oficial":
-                precio = int(dolar['casa']['nombre']['venta']) 
+        precio = float(self.__resultado[0]['casa']['venta'].replace(",","."))
         return precio

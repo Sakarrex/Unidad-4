@@ -1,0 +1,32 @@
+{
+    "__class__": "ManejadorProvincias",
+    "provincias": [
+        {
+            "__class__": "Provincia",
+            "__atributos__": {
+                "nombre": "San Juan",
+                "capital": "San Juan",
+                "habitantes": 680,
+                "departamentos": 19
+            }
+        },
+        {
+            "__class__": "Provincia",
+            "__atributos__": {
+                "nombre": "Misiones",
+                "capital": "Posadas",
+                "habitantes": 15000,
+                "departamentos": 17
+            }
+        },
+        {
+            "__class__": "Provincia",
+            "__atributos__": {
+                "nombre": "Santa Fe",
+                "capital": "Santa Fe",
+                "habitantes": 3369000,
+                "departamentos": 19
+            }
+        }
+    ]
+}
